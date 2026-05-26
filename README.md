@@ -11,7 +11,7 @@ to get started, you'll need:
 - [uber-apk-signer](https://github.com/patrickfav/uber-apk-signer): crucial for signing the final outputs
 
 # how to build for Kotlin
-1. clone the repository
+### 1. clone the repository
 
 only clone repos that uses build.gradle.kts. if it has Android.bp, it requires the full AOSP build system and will not work standalone with this guide.
 
@@ -21,7 +21,7 @@ git clone -b lineage-23.2 https://github.com/lineageos/android_packages_apps_Exa
 
 cd android_packages_apps_ExactCalculator
 ```
-2. compile source
+### 2. compile source
 
 for MacOS/Linux users: grant permissions first
 ```bash
@@ -36,7 +36,7 @@ run the Gradle wrapper inside the folder to start building:
 
 the output is in app/build/outputs/apk/release/
 
-3. sign the package
+### 3. sign the package
 
 run uber-apk-signer from your root directory:
 ```bash
