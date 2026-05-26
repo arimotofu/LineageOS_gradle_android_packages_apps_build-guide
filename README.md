@@ -44,6 +44,10 @@ java -jar uber-apk-signer.jar --apks app/build/outputs/apk/release/
 ```
 the output is the same as 2
 
+# how to build for Java
+
+coming soon
+
 # troubleshooting
 
 ### SDK location not found
