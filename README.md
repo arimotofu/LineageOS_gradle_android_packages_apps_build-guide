@@ -1,1 +1,72 @@
 # LineageOS_android_packages_apps-build-guide
+
+to get started, you'll need:
+- internet
+- 64 GB minimum storage
+- 16 GB minimum RAM
+- Git
+- [OpenJDK 17 or 21 from Adoptium](https://adoptium.net/temurin/releases)
+- Gradle (or use the .\gradlew wrapper)
+- [SDK build tools](https://developer.android.com/tools/releases/build-tools): skip if you have Android Studio installed
+- [uber-apk-signer](https://github.com/patrickfav/uber-apk-signer): crucial for signing the final outputs
+
+# how to build
+1. clone the repository
+
+only clone repos that uses build.gradle.kts. if it has Android.bp, it requires the full AOSP build system and will not work standalone with this guide.
+
+example: ExactCalculator with the lineage-23.2 branch
+```bash
+git clone -b lineage-23.2 https://github.com/lineageos/android_packages_apps_ExactCalculator
+cd android_packages_apps_ExactCalculator
+```
+2. compile source
+
+run the Gradle wrapper inside the folder to start building:
+```bash
+./gradlew assembleRelease
+```
+(if you are using Windows PowerShell, run .\gradlew assembleRelease instead)
+
+the output is in app/build/outputs/apk/release/
+
+3. sign the package
+
+run uber-apk-signer from your root directory:
+```bash
+java -jar uber-apk-signer.jar --apks app/build/outputs/apk/release/
+```
+the output is the same as 2
+
+# troubleshooting
+
+### SDK location not found
+
+if Gradle complains that the Android SDK location can't be found:
+
+- create a local.properties file in the root directory, then define your SDK path
+
+Windows:
+```bash
+sdk.dir=C:\Users\username here\AppData\Local\Android\Sdk
+```
+Linux:
+```bash
+sdk.dir=/home/username here/Android/Sdk
+```
+
+### Java version mismatch
+
+if you get an unsupported class file major version error:
+
+- ensure environment variables point to OpenJDK 17 or 21
+- in the terminal, check the active version:
+```bash
+java -version
+```
+
+# credits
+- The LineageOS Team
+- marcone
+- patrickfav
+- The Adoptium Working Group
