@@ -5,12 +5,12 @@ to get started, you'll need:
 - 64 GB minimum storage
 - 16 GB minimum RAM
 - Git
-- [OpenJDK 8, 11, 17 and 21 from Adoptium](https://adoptium.net/temurin/releases)
+- [OpenJDK 17 and 21 from Adoptium](https://adoptium.net/temurin/releases)
 - Gradle (or use the .\gradlew wrapper)
 - [SDK build tools](https://developer.android.com/tools/releases/build-tools): skip if you have Android Studio installed
 - [uber-apk-signer](https://github.com/patrickfav/uber-apk-signer): crucial for signing the final outputs
 
-# how to build for Kotlin
+# how to build
 ### 1. clone the repository
 
 only clone repos that uses build.gradle.kts. if it has Android.bp, it requires the full AOSP build system and will not work standalone with this guide.
@@ -43,10 +43,6 @@ run uber-apk-signer from your root directory:
 java -jar uber-apk-signer.jar --apks app/build/outputs/apk/release/
 ```
 the output is the same as 2
-
-# how to build for Java
-
-coming soon
 
 # troubleshooting
 
