@@ -52,8 +52,6 @@ coming soon
 
 ### SDK location not found
 
-if Gradle complains that the Android SDK location can't be found:
-
 - create a local.properties file in the root directory, then define your SDK path
 
 Windows:
@@ -66,8 +64,6 @@ sdk.dir=/home/username here/Android/Sdk
 ```
 
 ### Java version mismatch
-
-if you get an unsupported class file major version error:
 
 - ensure environment variables point to OpenJDK 17 or 21
 - in the terminal, check the active version:
