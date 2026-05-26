@@ -13,7 +13,7 @@ to get started, you'll need:
 # how to build
 ### 1. clone the repository
 
-only clone repos that has `build.gradle` or `build.gradle.kts`. if it doesn't, it requires the full AOSP build system and will not work standalone with this guide.
+only clone repos that has `gradlelew.bat`. if it doesn't, it requires the full AOSP build system and will not work standalone with this guide.
 
 example: ExactCalculator with the lineage-23.2 branch
 ```bash
