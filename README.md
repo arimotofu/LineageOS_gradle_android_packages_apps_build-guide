@@ -23,6 +23,11 @@ cd android_packages_apps_ExactCalculator
 ```
 2. compile source
 
+for MacOS/Linux users: grant permissions first
+```bash
+chmod +x gradlew
+```   
+
 run the Gradle wrapper inside the folder to start building:
 ```bash
 ./gradlew assembleRelease
