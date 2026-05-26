@@ -18,6 +18,7 @@ only clone repos that uses build.gradle.kts. if it has Android.bp, it requires t
 example: ExactCalculator with the lineage-23.2 branch
 ```bash
 git clone -b lineage-23.2 https://github.com/lineageos/android_packages_apps_ExactCalculator
+
 cd android_packages_apps_ExactCalculator
 ```
 2. compile source
