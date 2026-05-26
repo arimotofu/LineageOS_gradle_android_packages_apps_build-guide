@@ -23,7 +23,7 @@ cd android_packages_apps_ExactCalculator
 ```
 ### 2. compile source
 
-for MacOS/Linux users: grant permissions first
+for MacOS/Linux users: grant permissions first:
 ```bash
 chmod +x gradlew
 ```   
@@ -42,13 +42,13 @@ run uber-apk-signer from your root directory:
 ```bash
 java -jar uber-apk-signer.jar --apks app/build/outputs/apk/release/
 ```
-the output is the same as 2
+the output is the same as 2.
 
 # troubleshooting
 
 ### SDK location not found
 
-- create a local.properties file in the root directory, then define your SDK path
+- create a local.properties file in the root directory, then define your SDK path.
 
 Windows:
 ```bash
@@ -61,7 +61,7 @@ sdk.dir=/home/username here/Android/Sdk
 
 ### Java version mismatch
 
-- ensure environment variables point to OpenJDK 17 or 21
+- ensure environment variables point to OpenJDK 17 or 21.
 - in the terminal, check the active version:
 ```bash
 java -version
@@ -76,4 +76,4 @@ java -version
 ---
 notes from arimotofu:
 
-*i can't guarantee if these works on Linux/MacOS so feel free to try and commit changes 
+*i can't guarantee if these works on Linux/MacOS so feel free to try and commit changes :P
