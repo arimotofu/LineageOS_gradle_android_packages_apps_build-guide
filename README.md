@@ -1,4 +1,4 @@
-# LineageOS_gradle_android_packages_apps_build-guide
+# LineageOS gradle android_packages_apps build-guide
 
 to get started, you'll need:
 - internet
